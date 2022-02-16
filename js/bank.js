@@ -30,8 +30,8 @@ document.getElementById('calculation').addEventListener('click', function () {
 // input function 
 function ammount(inputId) {
     const ammountField = document.getElementById(inputId);
-    const totalIncome = ammountField.value;
+    const ammountNumber = ammountField.value;
     ammountField.value = '';
-    return totalIncome;
+    return ammountNumber;
 }
 
