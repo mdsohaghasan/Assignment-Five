@@ -6,30 +6,27 @@ document.getElementById('calculation').addEventListener('click', function () {
     // food field
     const foodField = document.getElementById('food');
     const foodData = foodField.value;
-    console.log(foodData);
+
 
     // rent field
     const rentField = document.getElementById('rent');
     const rentData = rentField.value;
-    console.log(rentData);
+
     // cloth field
     const clothField = document.getElementById('cloth');
     const clothData = clothField.value;
-    console.log(clothData);
-    const totalExpense = foodData + rentData + clothData;
 
-    console.log(totalExpense);
-
+    // food and cloth  and rent field sum
+    const totalExpense = parseFloat(foodData) + parseFloat(rentData) + parseFloat(clothData);
+    // minus total-income to total-expanse
     const totalBalance = totalIncome - totalExpense;
-    console.log(totalBalance);
 
-    // show
+    // show all value
+    const showTotalExpense = document.getElementById('expense');
+    showTotalExpense.innerText = totalExpense;
 
-    const ex = document.getElementById('expense');
-    ex.innerText = totalExpense;
-
-    const bls = document.getElementById('balance');
-    bls.innerText = totalBalance;
+    const showTotalBalance = document.getElementById('balance');
+    showTotalBalance.innerText = totalBalance;
 
 
 });
