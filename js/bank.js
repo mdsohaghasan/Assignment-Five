@@ -1,17 +1,17 @@
 document.getElementById('calculation').addEventListener('click', function () {
 
     // income field
-    const incomeData = ammount('income');
+    const incomeData = amount('income');
 
 
     // food field
-    const foodData = ammount('food');
+    const foodData = amount('food');
 
     // rent field
-    const rentData = ammount('rent');
+    const rentData = amount('rent');
 
     // cloth field
-    const clothData = ammount('cloth');
+    const clothData = amount('cloth');
 
     // account calculation
     const totalExpense = parseFloat(foodData) + parseFloat(rentData) + parseFloat(clothData)
@@ -19,24 +19,24 @@ document.getElementById('calculation').addEventListener('click', function () {
     const totalBalance = incomeData - totalExpense;
 
 
-    //set total ammount result
+    //set total amount result
     const setTotalExpense = document.getElementById('expense');
     setTotalExpense.innerText = totalExpense;
 
-    if (incomeData > totalExpense) {
+    if (incomeData > totalExpense && incomeData > 0) {
         const setTotalBalance = document.getElementById('balance');
         setTotalBalance.innerText = totalBalance;
     } else {
         const errorMsgAleart = document.getElementById('errorMsg')
-        errorMsgAleart.innerText = 'your costs more than your savings';
+        errorMsgAleart.innerText = 'your costs more than your balance';
     }
 
 });
 
 // input function 
-function ammount(inputId) {
-    const ammountField = document.getElementById(inputId);
-    const ammountNumber = ammountField.value;
-    ammountField.value = '';
-    return ammountNumber;
+function amount(inputId) {
+    const amountField = document.getElementById(inputId);
+    const amountNumber = amountField.value;
+    amountField.value = '';
+    return amountNumber;
 }
