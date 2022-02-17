@@ -3,6 +3,7 @@ document.getElementById('calculation').addEventListener('click', function () {
     // income field
     const incomeData = ammount('income');
 
+
     // food field
     const foodData = ammount('food');
 
@@ -22,8 +23,13 @@ document.getElementById('calculation').addEventListener('click', function () {
     const setTotalExpense = document.getElementById('expense');
     setTotalExpense.innerText = totalExpense;
 
-    const setTotalBalance = document.getElementById('balance');
-    setTotalBalance.innerText = totalBalance;
+    if (incomeData > totalExpense) {
+        const setTotalBalance = document.getElementById('balance');
+        setTotalBalance.innerText = totalBalance;
+    } else {
+        const errorMsgAleart = document.getElementById('errorMsg')
+        errorMsgAleart.innerText = 'your costs more than your savings';
+    }
 
 });
 
@@ -34,4 +40,3 @@ function ammount(inputId) {
     ammountField.value = '';
     return ammountNumber;
 }
-
