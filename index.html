@@ -16,7 +16,7 @@
     <header class="m-10">
         <h1 class="text-5xl text-purple-700 text-center"> Money Account calculator</h1>
     </header>
-    <main class="m-10 flex flex-row">
+    <main class="m-10 flex flex-row ">
         <section class="container  w-3/6 mx-5">
             <img src="img/monet-1.jpg" alt="">
         </section>
@@ -39,7 +39,7 @@
                     class="border-2 border-gray-200 rounded w-2/5 py-1 px-1 my-2 text-gray-700"><br>
                 <label class="text-lg">Clothes :</label>
                 <input type="text" id="cloth" name="lname"
-                    class="border-2 border-gray-200 rounded w-2/5 py-1 px-1  my-2 text-gray-700"><br><br>
+                    class="border-2 border-gray-200 rounded w-2/5 py-1 px-1  my-2 text-gray-700"><br>
                 <input type="submit" value="Calculate" id="calculation"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-3 rounded">
             </div>
@@ -48,13 +48,14 @@
 
             <h2 class="text-2xl font-semibold">Balance : $ <span id="balance"></span> </h2>
             <p id="errorMsg"></p>
-
-            <label class="text-lg">Save :</label>
-            <input type="text" id="save" name="fname"
-                class="border-2 border-gray-200 rounded w-2/5 py-1 px-1 my-3 text-gray-700">
-            <span>%</span>
-            <input type="submit" value="save" id="saveBtn"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <div>
+                <label class="text-lg">Save :</label>
+                <input type="text" id="save"
+                    class="border-2 border-gray-200 rounded w-2/5 py-1 px-1 my-3 text-gray-700">
+                <span>%</span>
+                <input type="submit" value="save" id="saveBtn"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            </div>
             <h2 class="text-2xl font-semibold">Saving Account : </h2>
 
             <h2 class="text-2xl font-semibold">Remmaning Account : </h2>
